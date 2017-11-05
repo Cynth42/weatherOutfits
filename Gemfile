@@ -53,3 +53,10 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.3'
+# gem 'simple_form', '~> 3.5'
+gem 'area'
+gem 'forecast_io'
+gem 'geocoder'
+gem 'httparty', '~> 0.15.6'
+gem 'pry-rails', '~> 0.3.6'
+

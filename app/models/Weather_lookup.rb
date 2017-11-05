@@ -21,7 +21,7 @@ class Weather_lookup
     end
     
     def hourly_temperature(hourly_weather_hash)
-        # binding.pry
+        
         hourly_forecast_response = hourly_weather_hash.parsed_response['response']['hourly_forecast']['forecast'].first
         self.temperature = hourly_forecast_response['temp']['english']
         self.icon = hourly_forecast_response['icon_url']
