@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> </title>
+
+
+
+</head>
+<body>
+
+<br>
+
+<!-- search by city and state -->
+<!-- <form> -->	
+<div class = "wrapper">
+  <div class = "location-page"> 
+
+    <div class= "location-form">
+
+    <h1> Get Your Current Weather </h1>
+       
+      <%= form_for :location, url: submit_url, html: {class: 'search-form'} do |f| %>
+    
+        <p class = "city-input">
+          <%= f.label :City %>
+          <%= f.text_field :city %>
+        </p>
+
+        <p class= "state-input">
+          <%= f.label :State %>
+          <%= f.select :state, options_for_select(us_states, "NY") %>
+        </p>
+
+        <p class= "submit">
+          <%= f.submit 'Search' %>
+        </p>
+        <% end %>
+     </div>
+    </div>
+ </div>     
+
+<!--End form> -->
+
+	
+
+
+<!-- weather content goes into empty div -->
+<div class="api-result">
+
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+

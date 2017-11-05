@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Forecast</title>
+	
+</head>
+<body>
+
+  <div class = "wrapper">
+    <div class = "forecast-page"> 
+
+      <div class= "forecast-form">
+        <h1> Get Your Hourly, Tomorrow and Weekly Forecast Here: </h1>
+         <%= form_tag("/forecasts", method: "get", class: "form-inline") do %> 
+    
+         <p class = "city-input">
+           <%= label_tag :City %>
+           <%= text_field_tag :city,  nil, class: "form-control", placeholder: "Enter City Name" %>
+         </p>
+
+         <p class= "state-input">
+           <%= label_tag :State %>
+           <%= select_tag :state, options_for_select(us_states, "NY"), class: "form-control" %>
+         </p>
+
+         <p class= "submit">
+           <%= submit_tag 'Search', name: nil, class:"btn btn-primary" %>
+         </p>
+         <% end %>
+      </div>
+  </div>
+</div>
+
+	
+ </body>
+</html>

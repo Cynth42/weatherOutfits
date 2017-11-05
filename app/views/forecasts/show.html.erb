@@ -1,0 +1,73 @@
+<!-- shows current weather -->
+<div id="current_weather">
+	Current:
+	<br>
+		Location: <%= @weather_lookup.city %>, <%= @weather_lookup.state %> <%= image_tag @weather_lookup.icon %> <br>
+		On the hour: <%=@weather_lookup.weekday_name %> <br>
+		High/Low: <%=@weather_lookup.day_one_high %>F : <%= @weather_lookup.day_one_low %>F 
+		<br>
+		It is currently: <%= @weather_lookup.temperature %>F <br>
+		Chance of rain: <%= @weather_lookup.chance_of_rain %>% <br>
+
+<br>
+<br>
+
+
+
+<!-- shows weekly forecast -->
+
+<div id="tomorrow_weather">
+Tomorrow:
+	<br>
+		<%= @weather_lookup.tomorrow %> <br> 
+		<%= image_tag @weather_lookup.tomorrow_icon %> <br>
+		
+		<%= @weather_lookup.tomorrow_condition %> <br>
+		Chance of rain: <%= @weather_lookup.chance_of_rain %>% <br>
+		High/Low: <%=@weather_lookup.day_two_high %>F : <%= @weather_lookup.day_two_low %>F 
+
+</div>
+
+<br>
+<br>
+	
+
+<div id="weekly_weather">
+Weekly forecast:
+<!-- week -->
+	<br>
+		<%=@weather_lookup.day_one %> : <%= @weather_lookup.day_one_condition %> 
+	<br>
+		High/Low: <%=@weather_lookup.day_one_high %>F : <%= @weather_lookup.day_one_low %>F 
+	
+	<br>
+		<%=@weather_lookup.day_two %> : <%= @weather_lookup.day_two_condition %>
+	<br>
+		High/Low: <%=@weather_lookup.day_two_high %>F : <%= @weather_lookup.day_two_low %>F 
+	
+	<br>
+		<%=@weather_lookup.day_three %> : <%= @weather_lookup.day_three_condition %>
+	<br>
+		High/Low: <%=@weather_lookup.day_three_high %>F : <%= @weather_lookup.day_three_low %>F 
+
+	<br>
+		<%=@weather_lookup.day_four %> : <%= @weather_lookup.day_four_condition %>
+	<br>
+		High/Low: <%=@weather_lookup.day_four_high %>F : <%= @weather_lookup.day_four_low %>F 
+
+	<br>
+		<%=@weather_lookup.day_five %> : <%= @weather_lookup.day_five_condition %>
+	<br>
+		High/Low: <%=@weather_lookup.day_five_high %>F : <%= @weather_lookup.day_five_low %>F 
+
+	<br>
+		<%=@weather_lookup.day_six %> : <%= @weather_lookup.day_six_condition %>
+	<br>
+		High/Low: <%=@weather_lookup.day_six_high %>F : <%= @weather_lookup.day_six_low %>F 
+
+	<br>
+		<%=@weather_lookup.day_seven %> : <%= @weather_lookup.day_seven_condition %>
+	<br>
+		High/Low: <%=@weather_lookup.day_seven_high %>F : <%= @weather_lookup.day_seven_low %>F 
+</div>
+
