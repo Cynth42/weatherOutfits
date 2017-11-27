@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     #get '/users/sign_out' => 'devise/sessions#destroy'
     
     
-    
+    get'/about' => 'forecasts#about'
     get '/welcome' => 'forecasts#index'
     get '/forecast' => 'forecasts#show'
     

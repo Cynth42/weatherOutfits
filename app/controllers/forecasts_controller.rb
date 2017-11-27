@@ -1,4 +1,7 @@
 class ForecastsController < ApplicationController
+    def about
+    end
+    
     def index
         
         forecast = Forecast.all
@@ -13,7 +16,7 @@ class ForecastsController < ApplicationController
     end
     
     def show
-        @weather_lookup = Weather_lookup.new(params[:city], params[:state])
+        @weather_lookup = WeatherLookup.new(params[:zip])
         
     end
 

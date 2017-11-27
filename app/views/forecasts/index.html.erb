@@ -8,32 +8,30 @@
 	
 </head>
 <body>
+ 
 
-  <div class = "wrapper">
-    <div class = "forecast-page"> 
-
-      <div class= "forecast-form">
-        <h1> Get Your Hourly, Tomorrow and Weekly Forecast Here: </h1>
-         <%= form_tag("/forecasts", method: "get", class: "form-inline") do %> 
     
-         <p class = "city-input">
-           <%= label_tag :City %>
-           <%= text_field_tag :city,  nil, class: "form-control", placeholder: "Enter City Name" %>
+<div class="container">
+  <div id="landing">
+  <div class="row"><div class="col-xs-offset-3"><%= image_tag "scarf.png", :id => "sologo", :width => "45%" %></div></div>
+  </div>
+<div class="row">
+  <div class="col-sm-offset-3 col-sm-6" id="searchdiv">
+        <h3 class="text-center"> Get Hourly, Tomorrow and Weekly Forecast Here:</h3>
+         <%= form_tag("/forecast", method: "get", class: "form-inline") do %> 
+    
+         <div class ="form-group">
+           <%= label_tag :Zip %>
+           <%= text_field_tag :zip,  nil, class: "form-control", placeholder: "Enter Your Zip Code (e.g. : 10017, 90210 etc)" %>
          </p>
-
-         <p class= "state-input">
-           <%= label_tag :State %>
-           <%= select_tag :state, options_for_select(us_states, "NY"), class: "form-control" %>
-         </p>
-
+ 
          <p class= "submit">
            <%= submit_tag 'Search', name: nil, class:"btn btn-primary" %>
          </p>
          <% end %>
       </div>
-  </div>
-</div>
-
+  
 	
  </body>
 </html>
+<%= image_tag "indexp.jpg", :id => "bgimage", :class => "bgimage" %>

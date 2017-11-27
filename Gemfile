@@ -14,8 +14,13 @@ gem 'sqlite3'
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+#gem 'bourbon', '~> 4.3', '>= 4.3.4'
+#gem 'neat', '~> 2.1'
+#gem 'boostrap-sass', '~> 0.0.2'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
