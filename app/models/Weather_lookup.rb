@@ -1,5 +1,5 @@
 class WeatherLookup
-    attr_accessor :temperature, :icon, :dew_point, :feels_like, :humidity, :windchill, :wind_dir, :heat_index, :weekday_name, :chance_of_rain, :chance_of_snow, :uvi, :tomorrow, :tomorrow_condition, :tomorrow_icon, :day_one, :day_one_condition, :day_one_high, :day_one_low, :day_one_icon, :day_two, :day_two_condition, :day_two_high, :day_two_low, :day_two_icon, :day_three, :day_three_condition, :day_three_high, :day_three_low, :day_three_icon, :day_four, :day_four_condition, :day_four_high, :day_four_low, :day_four_icon, :day_five, :day_five_condition, :day_five_high, :day_five_low, :day_five_icon, :day_six, :day_six_condition, :day_six_high, :day_six_low, :day_six_icon, :day_seven, :day_seven_condition, :day_seven_high, :day_seven_low, :day_seven_icon
+ attr_accessor :temperature, :icon, :dew_point, :feels_like, :humidity, :windchill, :wind_dir, :heat_index, :weekday_name, :chance_of_rain, :chance_of_snow, :uvi, :tomorrow, :tomorrow_condition, :tomorrow_icon, :day_one, :day_one_condition, :day_one_high, :day_one_low, :day_one_icon, :day_two, :day_two_condition, :day_two_high, :day_two_low, :day_two_icon, :day_three, :day_three_condition, :day_three_high, :day_three_low, :day_three_icon, :day_four, :day_four_condition, :day_four_high, :day_four_low, :day_four_icon, :day_five, :day_five_condition, :day_five_high, :day_five_low, :day_five_icon, :day_six, :day_six_condition, :day_six_high, :day_six_low, :day_six_icon, :day_seven, :day_seven_condition, :day_seven_high, :day_seven_low, :day_seven_icon
     
     def initialize(zip)
         @zip = zip
@@ -25,7 +25,7 @@ class WeatherLookup
     end
     
     def fetch_hourly_weather
-        HTTParty.get("http://api.wunderground.com/api/fd41ee3d477c9e9b/hourly/q/#{@zip}.xml")
+        HTTParty.get("https://api.wunderground.com/api/fd41ee3d477c9e9b/hourly/q/#{@zip}.xml")
     end
     
     def hourly_temperature(hourly_weather_hash)
@@ -47,7 +47,7 @@ class WeatherLookup
     end
     
     def fetch_tomorrow_weather
-        HTTParty.get("http://api.wunderground.com/api/fd41ee3d477c9e9b/forecast/q/#{state}/#{city.tr(' ', '_')}.xml")
+        HTTParty.get("https://api.wunderground.com/api/fd41ee3d477c9e9b/forecast/q/#{state}/#{city.tr(' ', '_')}.xml")
     end
     
     def tomorrow_forecast(tomorrow_weather_hash)
@@ -58,7 +58,7 @@ class WeatherLookup
     end
     
     def fetch_week_forecast
-        HTTParty.get("http://api.wunderground.com/api/fd41ee3d477c9e9b/forecast10day/q/#{state}/#{city.tr(' ', '_')}.xml")
+        HTTParty.get("https://api.wunderground.com/api/fd41ee3d477c9e9b/forecast10day/q/#{state}/#{city.tr(' ', '_')}.xml")
     end
     
     def week_forecast(week_weather_hash)

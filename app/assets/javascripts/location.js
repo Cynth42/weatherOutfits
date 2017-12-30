@@ -9,7 +9,7 @@ $(document).ready(function() {
 		//ajax request to the wunderground api with the state and city values from the form passed into the url
 
 		$.ajax({
-			url : "http://api.wunderground.com/api/fd41ee3d477c9e9b/geolookup/conditions/q/"+state+"/"+city+".json",
+			url : "https://api.wunderground.com/api/fd41ee3d477c9e9b/geolookup/conditions/q/"+state+"/"+city+".json",
 			dataType : "jsonp",
 			success : function(parsed_json) {
 				var location = parsed_json['location']['city'];

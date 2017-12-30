@@ -10,11 +10,12 @@
 <body>   
 <div class="container">
   <div id="landing">
-  <div class="row"><div class="col-xs-offset-3"><%= image_tag "scarf.png", :id => "soogo", :width => "45%" %></div></div>
+  <div class="row"><div class="col-xs-offset-4"><%= image_tag "shop.png", :id => "soogo", :width => "45%" %></div></div>
   </div>
+  <br>
   <div class="row">
      <div class="col-sm-offset-3 col-sm-6" id="searchdiv">
-        <h2 class="text-center"> Get Hourly, Tomorrow and Weekly Forecast Here:</h2>
+        <h1 class="text-center"> Get Hourly, Tomorrow and Weekly Forecast Here:</h2>
          <%= form_tag("/forecast", method: "get", class: "form-inline") do %> 
     
          <p class="form-group">
@@ -32,3 +33,8 @@
  </body>
 </html>
 <%= image_tag "background10.jpg", :id => "bigimage", :class => "bigimage" %>
+
+
+<!--<div class="container">		
+	  <div class="row"><div class="col-xs-offset-4"><%= image_tag "shop.png", :id => "soogo", :width => "45%" %></div></div>
+	 </div>-->
