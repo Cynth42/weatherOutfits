@@ -1,24 +1,4 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple and fun interactive Ruby on Rails app which gives you the current, hourly, tomorrow and weekly forecast of any state in the USA by providing your city or zip code. You can also make or delete a comment stating an appropriate outfit to wear according to the temperature.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
