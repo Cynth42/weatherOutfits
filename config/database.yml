@@ -22,4 +22,6 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: weatherOutfits
+  adapter:  postgresql
+  url: <%= ENV['DATABASE_URL'] %>
