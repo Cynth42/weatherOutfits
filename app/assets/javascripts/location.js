@@ -1,3 +1,5 @@
+//= require fin
+
 $(document).ready(function() {
 	$(".search-form").on("submit", function (e) {
 		e.preventDefault();
@@ -7,7 +9,7 @@ $(document).ready(function() {
 		//ajax request to the wunderground api with the state and city values from the form passed into the url
 
 		$.ajax({
-			url : "http://api.wunderground.com/api/9f9665f04fbd9ca7/geolookup/conditions/q/"+state+"/"+city+".json",
+			url : "http://api.wunderground.com/api/fd41ee3d477c9e9b/geolookup/conditions/q/"+state+"/"+city+".json",
 			dataType : "jsonp",
 			success : function(parsed_json) {
 				var location = parsed_json['location']['city'];
@@ -31,9 +33,9 @@ $(document).ready(function() {
 					data: $(".search-form").serialize(),
 					success : function(data) {
 						$(".api-result").empty(".api-result");
-						$( "<div class= 'weather-result'>" ).html("It's " + temperature_string +  " in " + location + " and it currently feels like " + feelslike_string ).prependTo( ".api-result" );
-						$("<div class= 'weather-icon')>").html("<img src =" + icon_url +">").appendTo(".weather-result");
-						$("<h2>").html("The Current Weather is: " + weather + ". The Relative Humidity is: " + relative_humidity + ". Wind Direction: " + wind_dir + ". Wind: " + wind_string + ". Precipitation: " + precip_1hr_string + ". Visibility: " + visibility_mi + ". Pressure: " + pressure_in + ". UV: " + UV ).appendTo(".api-result");
+						$("<div class='weather-result'>" ).html("It is " + temperature_string +  " in " + location + " and Feels Like " + feelslike_string ).prependTo( ".api-result" );
+						$("<div class='weather-icon')>").html("<img src =" + icon_url +">").appendTo(".weather-result");
+						$("<h2>").html("Forecast is " + weather + ". The Relative Humidity is " + relative_humidity + ". Wind Direction is " + wind_dir + ". Wind is " + wind_string + ". Precipitation is " + precip_1hr_string + ". Visibility is " + visibility_mi + ". Pressure is " + pressure_in + " and UV is " + UV ).appendTo(".api-result");
 						$(".api-result").removeClass("hide");
 						$(".api-result").append($(data));
 						$('input[type="text"],textarea').val('');

@@ -1,11 +1,9 @@
-<!-- shows current weather -->
 <div id="current_weather">
-	<h1><strong>Hourly Forecast: </strong></h1>
-	<br>
+	<h1 style="color:hsl(0, 100%, 100%); font-size:275%;"> Hourly Forecast: </h1>
 	<h3 class="text-center">Location: <%= @weather_lookup.city %>, <%= @weather_lookup.state %> <br><h3>
 	<h3 class="text-center">On the hour: <%=@weather_lookup.weekday_name %> <br><h3>
 	<h3 class="text-center">High: <%=@weather_lookup.day_one_high %> &deg F | Low: <%= @weather_lookup.day_one_low %> &deg F </h3>
-	<h3 class="text-center"><%= image_tag @weather_lookup.icon %> <br></h3>
+	<h3 class="weather-icon img"><%= image_tag @weather_lookup.icon %> <br></h3>
 	<br>
 	<h3 class="text-center">Currently: <%= @weather_lookup.temperature %> &deg F <br> </h3>
 	<h3 class="text-center">Feels like: <%= @weather_lookup.feels_like %> &deg F <br></h3>
@@ -16,68 +14,65 @@
 	<h3 class="text-center">Wind Chill <%= @weather_lookup.windchill %> &deg F<br></h3>
     <h3 class="text-center">Wind Direction: <%= @weather_lookup.wind_dir %> &deg F<br></h3>
     <h3 class="text-center">Heat Index: <%= @weather_lookup.heat_index %> &deg F <br></h3> 
-	<h3 class="text-center">UVI: <%= @weather_lookup.uvi %>% <br></h3>
-	
-
-
-<br>
-<br>
-<!-- shows tomorrow's weather -->
+	<h3 class="text-center">UVI: <%= @weather_lookup.uvi %>% <br></h3>	
+ <br>
 
 <div id="tomorrow_weather">
-<h1><strong>Tomorrow's Forecast:</strong></h1>
-	<br>
-		<h3 class="text-center"><%= @weather_lookup.tomorrow %> <br></h3>
-		<h3 class="text-center"><%= @weather_lookup.tomorrow_condition %> <br></h3>
-		<h3 class="text-center"><%= image_tag @weather_lookup.tomorrow_icon %> <br></h3>
-		<h3 class="text-center">High: <%=@weather_lookup.day_two_high %> &deg F  |  Low: <%= @weather_lookup.day_two_low %> &deg F </h3>
-        
+  <h1 style="color:hsl(0, 100%, 100%); font-size:275%;">Tomorrow's Forecast:</h1>
+	
+    <h3 class="text-center"><%= @weather_lookup.tomorrow %> <br></h3>
+    <h3 class="text-center"><%= @weather_lookup.tomorrow_condition %> <br></h3>
+	<h3 class="weather-icon img"><%= image_tag @weather_lookup.tomorrow_icon %> <br></h3>
+ <br>
+	<h3 class="text-center">High: <%=@weather_lookup.day_two_high %> &deg F  |  Low: <%= @weather_lookup.day_two_low %> &deg F </h3>       
 </div>
-
-<br>
 <br>
 	
-
 <div id="weekly_weather">
-<h1><strong>Seven Days forecast:</strong></h1>
-<!-- week -->
+ <h1 style="color:hsl(0, 100%, 100%); font-size:275%;">Seven Days forecast:</h1>
+	
+	<h3 class="text-center"><%=@weather_lookup.day_one %> : <%= @weather_lookup.day_one_condition %></h3> 
+	<h3 class="weather-icon img"><%= image_tag @weather_lookup.day_one_icon %></h3>  
 	<br>
-	<h3 class="text-center"><%=@weather_lookup.day_one %> : <%= @weather_lookup.day_one_condition %>></h3> 
-	<h3 class="text-center"><%= image_tag @weather_lookup.day_one_icon %></h3>  
 	<h3 class="text-center">High: <%=@weather_lookup.day_one_high %> &deg F  |  Low: <%= @weather_lookup.day_one_low %> &deg F <br> </h3> 
 	<br>
 	<br>
 	<h3 class="text-center"><%=@weather_lookup.day_two %> : <%= @weather_lookup.day_two_condition %></h3> 
-	<h3 class="text-center"><%= image_tag @weather_lookup.day_two_icon %></h3> 
+	<h3 class="weather-icon img"><%= image_tag @weather_lookup.day_two_icon %></h3> 
+	<br>
 	<h3 class="text-center">High: <%=@weather_lookup.day_two_high %> &deg F  |  Low: <%= @weather_lookup.day_two_low %> &deg F <br> </h3> 
 	<br>
 	<br>
 	<h3 class="text-center"><%=@weather_lookup.day_three %> : <%= @weather_lookup.day_three_condition %></h3> 
-	<h3 class="text-center"><%= image_tag @weather_lookup.day_three_icon %></h3> 
+	<h3 class="weather-icon img"><%= image_tag @weather_lookup.day_three_icon %></h3> 
+	<br>
 	<h3 class="text-center">High: <%=@weather_lookup.day_three_high %> &deg F  |  Low: <%= @weather_lookup.day_three_low %> &deg F <br></h3> 
 	<br>
 	<br>
 	<h3 class="text-center"><%=@weather_lookup.day_four %> : <%= @weather_lookup.day_four_condition %></h3> 
-	<h3 class="text-center"><%= image_tag @weather_lookup.day_four_icon %></h3> 
+	<h3 class="weather-icon img"><%= image_tag @weather_lookup.day_four_icon %></h3> 
+	<br>
 	<h3 class="text-center">High: <%=@weather_lookup.day_four_high %> &deg F  |   Low: <%= @weather_lookup.day_four_low %> &deg F <br> </h3> 
 	<br>
 	<br>
 	<h3 class="text-center"><%=@weather_lookup.day_five %> : <%= @weather_lookup.day_five_condition %></h3> 
-	<h3 class="text-center"><%= image_tag @weather_lookup.day_five_icon %> </h3> 
+	<h3 class="weather-icon img"><%= image_tag @weather_lookup.day_five_icon %> </h3> 
+	<br>
 	<h3 class="text-center">High: <%=@weather_lookup.day_five_high %> &deg F  |  Low: <%= @weather_lookup.day_five_low %> &deg F <br></h3> 
 	<br>
 	<br>
 	<h3 class="text-center"><%=@weather_lookup.day_six %> : <%= @weather_lookup.day_six_condition %></h3> 
-	<h3 class="text-center"><%= image_tag @weather_lookup.day_six_icon %></h3> 
+	<h3 class="weather-icon img"><%= image_tag @weather_lookup.day_six_icon %></h3> 
+	<br>
 	<h3 class="text-center">High: <%=@weather_lookup.day_six_high %> &deg F  |  Low: <%= @weather_lookup.day_six_low %> &deg F <br></h3> 
     <br>
 	<br>
 	<h3 class="text-center"><%=@weather_lookup.day_seven %> : <%= @weather_lookup.day_seven_condition %></h3>
-	<h3 class="text-center"><%= image_tag @weather_lookup.day_seven_icon %></h3> 
+	<h3 class="weather-icon img"><%= image_tag @weather_lookup.day_seven_icon %></h3> 
+	<br>
 	<h3 class="text-center">High: <%=@weather_lookup.day_seven_high %> &deg F | Low: <%= @weather_lookup.day_seven_low %> &deg F <br></h3> 	
 </div>
 
-<br>
-<%= link_to 'Back', forecasts_path %>
+<%= link_to 'Back', forecasts_path, class: "btn btn-sm btn-default"  %>
 
-<%= image_tag "show.jpg", :id => "bgimage", :class => "bgimage" %>
+<%= image_tag "show8.jpg", :id => "bigimage", :class => "bigimage" %>

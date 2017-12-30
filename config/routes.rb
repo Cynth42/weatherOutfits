@@ -1,12 +1,20 @@
 Rails.application.routes.draw do
   devise_for :users
     resources :forecasts
+    resources :locations do
+       resources :comments
+    end
+    
     root 'locations#find'
+    #root 'forecasts#index'
+    
     
     post "/", to: 'locations#submit', as: "submit"
     post 'locations/:id/comments', to: 'comments#create', as: "comment"
+    #delete 'locations/:id/comments/:id', to: 'comments#destroy', as: "delete"
     
     
+    get '/currentWeather' => 'locations#find'
     
     
     #get '/users/sign_in' => 'devise/sessions#new'
@@ -14,7 +22,7 @@ Rails.application.routes.draw do
     #get '/users/sign_out' => 'devise/sessions#destroy'
     
     
-    get'/about' => 'forecasts#about'
+    get '/about' => 'forecasts#about'
     get '/welcome' => 'forecasts#index'
     get '/forecast' => 'forecasts#show'
     

@@ -1,0 +1,94 @@
+body {
+	background: white;
+	background-image: image_url("whitewood.jpg"); 
+	background-position: center, center;
+	background-repeat: repeat;
+ }
+
+p {
+	color: #55404f; 
+ }
+ 
+ .wrapper {
+  max-width: 88em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/*.wrapper {
+   @include outer-container;
+   }*/
+
+.wrapper::after {
+  clear: both;
+  content: "";
+  display: table; //block;
+}
+	
+
+.hide {
+	display: none;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.inline {
+	display: inline;
+}
+
+.api-result {
+
+	h2 {
+		margin-top: 1em;
+	}
+
+.weather-result {
+	    background-image: image_url("temp-clouds4.jpg"); 
+		background-position: center, center;
+		font-size: 1em;
+		padding-left: .5em;
+		padding-right: .5em;
+		text-align:center;
+		padding-top: .5em;
+		color: #55404f; 
+		font-weight:bold;
+		
+		@media screen and (min-width: 30em) and (max-width: 53.75em) {  
+			font-size: 3em;
+		}
+
+		@media screen and (min-width: 53.75em) {  
+			font-size: 3.5em;
+		}
+		
+		.weather-icon {
+			text-align:center;
+			
+			img {
+				background-color: white;
+				border-radius: 50%;
+				padding: 5px;
+				height: 60px;
+				margin-bottom: -30px;
+				box-shadow: 1px 1px 1px 1px #55404f; 
+				transition: all .3s ease-in-out;
+				
+
+				&:hover {
+				
+				transform: scale(1.1) rotate(-7deg);
+				}
+			}	
+		}
+	}
+}
+
+.submit {
+	text-align:center;
+}
+		
+
+	

@@ -1,4 +1,14 @@
 class LocationsController < ApplicationController
+    before_action :authenticate_user!
+    layout 'fin', only: [:find]
+    
+    def index
+        @locations = Location.all
+    end
+    def new
+        @location = current_user.locations.build
+    end
+    
     def find
         #makes sure the search view is read
     end
@@ -6,7 +16,7 @@ class LocationsController < ApplicationController
     def submit
         
         #finds or creates a location record in the database using the location parameters
-        @location = Location.find_or_create_by(location_params)
+        @location = current_user.locations.find_or_create_by(location_params) #find_or_create_by(location_params)
         #if(@location.save)
         #Saved successfully; go to the  (or wherever)...
         # redirect_to @location, notice: "location created"
@@ -22,12 +32,13 @@ class LocationsController < ApplicationController
         end
     end
     
-    def show
-        @location = Location.find(params[:id])
-        respond_to do |format|
-            format.json { render :json => location}
-        end
-    end
+    #def show
+    #    @location = Location.find(params[:id])
+    #    @comment = @location.comments.build
+    #    respond_to do |format|
+    #        format.json { render :json => location}
+    #    end
+    # end
     
     private
     #sets the attributes that are allowed for a comment

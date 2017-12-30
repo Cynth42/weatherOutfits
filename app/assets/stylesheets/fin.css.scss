@@ -1,0 +1,27 @@
+
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import "normalize";
+
+@import "bourbon";
+@import "base/grid-settings";
+@import "neat";
+@import "base/variables";
+@import "base/forms";
+@import "base/global";
+@import "layout/header";
+@import "layout/footer";
+@import "pages/comments";
+@import "pages/location";
+
+#soogo {
+    margin-top: 4%;
+    opacity: .9	;
+    
+    }
+    
+	
+	
+  

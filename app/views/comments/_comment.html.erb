@@ -1,0 +1,22 @@
+
+<div class="comment-display">
+    <div class="pull-left comment_content">
+	<p>
+		<strong>Name:</strong>
+	      <%= comment.name %>
+	</p>
+	<p>
+		<strong>Comment:</strong>
+	     <%= comment.body %>
+	</p>
+	<p><small>Submitted <strong><%= time_ago_in_words(comment.created_at) %> ago</strong> by <%= current_user.email %></small></p></small></p>
+    </div>
+    <div class="btn-group pull-left"> 
+        <% if user_signed_in? %>
+        <%= link_to 'Destroy', location_comment_path(@location, comment), method: :delete, data: { confirm: 'Are you sure?' }, 
+                        class: "btn btn-sm btn-default" %>
+         <% end %>
+    
+    </div>
+ </div> 
+	

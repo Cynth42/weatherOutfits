@@ -7,31 +7,28 @@
 	<title>Forecast</title>
 	
 </head>
-<body>
- 
-
-    
+<body>   
 <div class="container">
   <div id="landing">
-  <div class="row"><div class="col-xs-offset-3"><%= image_tag "scarf.png", :id => "sologo", :width => "45%" %></div></div>
+  <div class="row"><div class="col-xs-offset-3"><%= image_tag "scarf.png", :id => "soogo", :width => "45%" %></div></div>
   </div>
-<div class="row">
-  <div class="col-sm-offset-3 col-sm-6" id="searchdiv">
-        <h3 class="text-center"> Get Hourly, Tomorrow and Weekly Forecast Here:</h3>
+  <div class="row">
+     <div class="col-sm-offset-3 col-sm-6" id="searchdiv">
+        <h2 class="text-center"> Get Hourly, Tomorrow and Weekly Forecast Here:</h2>
          <%= form_tag("/forecast", method: "get", class: "form-inline") do %> 
     
-         <div class ="form-group">
+         <p class="form-group">
            <%= label_tag :Zip %>
            <%= text_field_tag :zip,  nil, class: "form-control", placeholder: "Enter Your Zip Code (e.g. : 10017, 90210 etc)" %>
          </p>
  
-         <p class= "submit">
+         <p class="form-group">
            <%= submit_tag 'Search', name: nil, class:"btn btn-primary" %>
          </p>
          <% end %>
       </div>
-  
+  </div>
 	
  </body>
 </html>
-<%= image_tag "indexp.jpg", :id => "bgimage", :class => "bgimage" %>
+<%= image_tag "background10.jpg", :id => "bigimage", :class => "bigimage" %>

@@ -1,62 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title> </title>
+<div class="wrapper">
+  <div class="comment-page"> 
 
+      <div class="api-result hide">
 
-
-</head>
-<body>
-
-<br>
-
-<!-- search by city and state -->
-<!-- <form> -->	
-<div class="container">
-<div id="landing">
-  <div class="row"><div class="col-xs-offset-3"><%= image_tag "shop.png", :id => "sologo", :width => "45%" %></div></div>
+      </div>
+  </div>
 </div>
-<div class="row">
-  <div class="col-sm-offset-3 col-sm-6" id="searchdiv">
-   
-       <%= form_for :location, url: submit_url, html: {class: 'search-form'} do |f| %>
-         
-        <div class="form-group">
-          <%= f.label :City %>
-          <%= f.text_field :city, placeholder: "Enter Your City Name" %>
-        </div>
-
-        <div class="form-group">
-          <%= f.label :State %>
-          <%= f.select :state, options_for_select(us_states, "NY") %>
-        </div>
-        <br>
-        <div class="submit">
-          <%= f.submit 'Search', class: "btn btn-primary" %>
-        </div>
-        <% end %>
-    </div>    
- </div>
-</div>   
-
-<!--End form> -->
-
-	
-
-
-<!-- weather content goes into empty div -->
-<!--<div class="api-result">-->
-
-<!--</div>-->
-
-
-</body>
-</html>
-
-<%= image_tag "background7.jpg", :id => "bgimage", :class => "bgimage" %>
-
-
 
 
 

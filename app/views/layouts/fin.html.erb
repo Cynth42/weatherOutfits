@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title="Fin"/>
+        <%= stylesheet_link_tag "fin", media: 'all', 'data-turbolinks-track': 'reload'%>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <%= csrf_meta_tags %>
+</head>
+
+<body>
+ <header class="navbar navbar-fixed-top navbar-inverse">
+    <div class="navbar-inner">
+       <div class="container-fluid">
+         <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <%= link_to "WeatherOutfits", root_path, id: "logo" %>
+         </div>
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <nav>
+        	<% if user_signed_in? -%>
+        	 <ul class="nav navbar-nav navbar-right">
+        	   <li><%= link_to "About", about_path %></li> 
+        	   <li><%= link_to "Current Weather", root_path %></li>
+               <li><%= link_to "Forecast", forecasts_path %></li>	
+               <li class="dropdown">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= "Hi, #{current_user.email}!" %> <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">					
+                    <li><%= link_to 'Edit account', edit_user_registration_path %></li>
+                    <li class="divider"></li>
+                    <li><%= link_to ' Log out', destroy_user_session_path, :method => :delete %></li>
+                  </ul>
+               </li>
+             </ul> 
+                <% else %>
+                 <ul class="nav navbar-nav pull-right">
+                 <li><%= link_to 'Login/Signup', new_user_session_path %></li>
+                <% end %>
+                </ul>
+          </nav>
+        </div>
+       </div>
+      </header> 
+
+        <div id="infos">
+            <div id="notice" class="alert alert-success alert-dismissible" role="alert">
+               <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span></button>
+                <p class="notice"><%= notice %></p>
+            </div>
+            <div id="alert" class="alert alert-warning alert-dismissible" role="alert">
+              <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span></button>
+              <p class="alert"><%= alert %></p>
+            </div>
+        </div>
+	  <div class="container-fluid"></div>
+	  
+	  
+	   <!--<img src="/images/shop.png" alt= "logo">-->
+	  <!--<a href="<%= root_url %>"><h1 class="main-title">Current Weather Condition</h1></a>-->
+		<!--<hr>-->
+     <div class="container">		
+	  <div class="row"><div class="col-xs-offset-4"><%= image_tag "shop.png", :id => "soogo", :width => "45%" %></div></div>
+	 </div>
+		<!--<h2>What Would You Wear Today? </h2>-->
+
+		<div class="wrapper">
+        <div class="location-page"> 
+
+       <div class="location-form">
+        <h1> Get Your Current Weather </h1>
+ 
+        <%= form_for :location, url: submit_url, html: {class: 'search-form'} do |f| %>
+    
+         <p class="city-input">
+          <%= f.label :City %>
+          <%= f.text_field :city %>
+         </p>
+
+        <p class="state-input">
+          <%= f.label :State %>
+          <%= f.select :state, options_for_select(us_states, "NY") %>
+        </p>
+
+        <p class="submit">
+          <%= f.submit 'Search' %>
+        </p>
+        <% end %>
+      </div>
+  </div>
+</div>
+	<%= yield %>  
+	<%= render "layouts/partials/footer" %>
+		
+ </body>
+</html>
+
+
+
+

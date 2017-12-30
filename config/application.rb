@@ -14,5 +14,8 @@ module WeatherOutfits
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
-  end
+    #config.assets.precompile += %w( fin.css.scss )
+    # Precompile *all* assets, except those that start with underscore
+    #Rails.application.config.assets.precompile += [/^[-_a-zA-Z0-9]
+   end
 end

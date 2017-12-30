@@ -1,0 +1,8 @@
+<% @locations.each do |location| %>
+
+  <div class="location_wrapper">
+    <h2 class="title"><%= link_to location.city, location %></h2>
+   
+    <p class="date"><%= location.created_at.strftime("%B, %d, %Y") %> </p>
+  </div>   
+<% end %>
