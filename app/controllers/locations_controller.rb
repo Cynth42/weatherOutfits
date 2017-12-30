@@ -10,20 +10,13 @@ class LocationsController < ApplicationController
     end
     
     def find
-        #makes sure the search view is read
+        #To make sure that the search view is read
     end
     
     def submit
         
         #finds or creates a location record in the database using the location parameters
-        @location = current_user.locations.find_or_create_by(location_params) #find_or_create_by(location_params)
-        #if(@location.save)
-        #Saved successfully; go to the  (or wherever)...
-        # redirect_to @location, notice: "location created"
-        #else
-        #Validation failed; show the "new" form again...
-        #render :action => :new
-        #end
+        @location = current_user.locations.find_or_create_by(location_params)
         #response can be html or js
         #html renders the comments form partial
         
