@@ -35,7 +35,7 @@ $(document).ready(function() {
 						$(".api-result").empty(".api-result");
 						$("<div class='weather-result'>" ).html("It is " + temperature_string +  " in " + location + " and Feels Like " + feelslike_string ).prependTo( ".api-result" );
 						$("<div class='weather-icon')>").html("<img src =" + icon_url +">").appendTo(".weather-result");
-						$("<h2>").html("Forecast is " + weather + ". The Relative Humidity is " + relative_humidity + ". Wind Direction is " + wind_dir + ". Wind is " + wind_string + ". Precipitation is " + precip_1hr_string + ". Visibility is " + visibility_mi + ". Pressure is " + pressure_in + " and UV is " + UV ).appendTo(".api-result");
+						$("<h2>").html(weather + ". The Relative Humidity is: " + relative_humidity + ". Wind Direction: " + wind_dir + ". Wind: " + wind_string + ". Precipitation: " + precip_1hr_string + ". Visibility: " + visibility_mi + ". Pressure: " + pressure_in + ". UV: " + UV ).appendTo(".api-result");
 						$(".api-result").removeClass("hide");
 						$(".api-result").append($(data));
 						$('input[type="text"],textarea').val('');
