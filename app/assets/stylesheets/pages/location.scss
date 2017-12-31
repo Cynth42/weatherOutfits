@@ -3,7 +3,7 @@
   background-color: #d6dddf;
   background-image: -webkit-linear-gradient(-460deg, #d6dddf, #89b6b7);
   background-image: linear-gradient(190deg,#d6dddf, #89b6b7);
-  margin-top: .5em;
+  margin-top: .25em;
   padding-top: .25em;
 }
 @media screen and (min-width: 30em) and (max-width: 53.75em) {
@@ -41,11 +41,11 @@
   margin-top: .5em;
 
 @media screen and (min-width: 53.75em) {
-    font-size: 2.2em;
+    font-size: 2em;
   }
 
 @media screen and (min-width: 53.75em) {
-    font-size: 2.7em;
+    font-size: 2.5em;
   }
 }
 
@@ -56,7 +56,7 @@ h2 {
 
 
 .location-form {
-  padding-bottom: 1em;
+  padding-bottom: .5em;
   text-align: center;
   }
 
