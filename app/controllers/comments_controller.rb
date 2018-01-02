@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-    before_action :authenticate_user! 
+     before_action :authenticate_user! 
     
     #generates comment based on location id
     #response will be the rendering of an html partial with local variables passed in
