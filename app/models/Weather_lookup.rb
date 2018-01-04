@@ -25,7 +25,7 @@ class WeatherLookup
     end
     
     def fetch_hourly_weather
-        HTTParty.get("https://api.wunderground.com/api/fd41ee3d477c9e9b/hourly/q/#{@zip}.xml")
+        HTTParty.get("http://api.wunderground.com/api/fd41ee3d477c9e9b/hourly/q/#{@zip}.xml")
     end
     
     def hourly_temperature(hourly_weather_hash)
@@ -47,7 +47,7 @@ class WeatherLookup
     end
     
     def fetch_tomorrow_weather
-        HTTParty.get("https://api.wunderground.com/api/fd41ee3d477c9e9b/forecast/q/#{state}/#{city.tr(' ', '_')}.xml")
+        HTTParty.get("http://api.wunderground.com/api/fd41ee3d477c9e9b/forecast/q/#{state}/#{city.tr(' ', '_')}.xml")
     end
     
     def tomorrow_forecast(tomorrow_weather_hash)
@@ -58,7 +58,7 @@ class WeatherLookup
     end
     
     def fetch_week_forecast
-        HTTParty.get("https://api.wunderground.com/api/fd41ee3d477c9e9b/forecast10day/q/#{state}/#{city.tr(' ', '_')}.xml")
+        HTTParty.get("http://api.wunderground.com/api/fd41ee3d477c9e9b/forecast10day/q/#{state}/#{city.tr(' ', '_')}.xml")
     end
     
     def week_forecast(week_weather_hash)
