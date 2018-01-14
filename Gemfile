@@ -13,7 +13,7 @@ gem 'rails', '~> 5.1.4'
 gem 'sqlite3', group: :development # Added development group.
 
 # Added postgres and made it Heroku production.
-gem 'pg', group: :production 
+gem 'pg', '~>0.11'
 
 # Rails refactor gem for Heroku
 gem 'rails_12factor', group: :production
