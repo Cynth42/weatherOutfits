@@ -17,14 +17,10 @@ p {
 }
 
 
-/*.wrapper {
-   @include outer-container;
-   }*/
-
 .wrapper::after {
   clear: both;
   content: "";
-  display: table; //block;
+  display: table;
 }
 	
 
@@ -65,26 +61,26 @@ p {
 			font-size: 3.5em;
 		}
 		
-		.weather-icon {
-			text-align:center;
+.weather-icon {
+	text-align:center;
 			
-			img {
-				background-color: white;
-				border-radius: 50%;
-				padding: 5px;
-				height: 60px;
-				margin-bottom: -30px;
-				box-shadow: 1px 1px 1px 1px #55404f; 
-				transition: all .3s ease-in-out;
+	 img {
+		background-color: white;
+		border-radius: 50%;
+		padding: 5px;
+		height: 60px;
+		margin-bottom: -30px;
+		box-shadow: 1px 1px 1px 1px #55404f; 
+		transition: all .3s ease-in-out;
 				
 
-				&:hover {
+		  &:hover {
 				
-				transform: scale(1.1) rotate(-7deg);
+			 transform: scale(1.1) rotate(-7deg);
 				}
-			}	
-		}
+		}	
 	}
+ }
 }
 
 .submit {
