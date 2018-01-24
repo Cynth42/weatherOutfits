@@ -16,6 +16,19 @@ footer {
 	p {
 		font-size: .9em;
 	}
+	
+   .link {
+      text-decoration: none;
+      color: blue;
+   }
+
+   .link:hover {
+    filter: brightness(125%);
+   }
+
+  .link:active {
+    filter: brightness(140%);
+  }
 
 	//hr {
 	//	max-width: 40%;

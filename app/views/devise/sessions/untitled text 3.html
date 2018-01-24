@@ -1,0 +1,85 @@
+<head>
+	<meta charset="utf-8">
+	<title>Animal Trading Cards</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class="card">
+		<!-- your favorite animal's name goes here -->
+
+	<h3 class="animal-name">Pygmy Marmoset</h3>
+	<!-- your favorite animal's image goes here -->
+		<img src="http://ca.static.lalalay.com/upload/images/real/2016/11/28/baby-pygmy-marmoset-found-after-being-stolen-from-symbio-wildlife-park-south-of-sydney__915297_.jpg" alt="Pygmy Marmoset" class="image">
+		<div class="content">
+			<!-- your favorite animal's interesting fact goes here -->
+			<p class="fun-fact">Pygmy marmosets can rotate their head 180 degrees!</p>
+			<ul class ="info">
+				<!-- your favorite animal's list items go here -->
+				<li><span class="descriptor">Scientific Name</span>: Cebuella pygmaea</li>
+				<li><span class="descriptor">Average Weight</span>: 100 grams (3.5 oz)</li>
+				<li><span class="descriptor">Geographic Range</span>: Amazon Basin</li>
+				<li><span class="descriptor">Diet</span>: Tree gum, fruit, and insects</li>
+			</ul>
+			<!-- your favorite animal's description goes here -->
+			<p class="about">One of the world's smallest primates, the pygmy marmoset lives in evergreen forests in the Amazon Basin, often near rivers. These social animals live in small groups of up to nine members. These family groups have an intricate communication system. Despite their small size, their low-frequency calls reveraberate througout the forest.</p>
+		</div>
+	</div>
+</body>
+
+
+
+.card {
+  border: 5px solid #3B6064;
+  border-radius: 5px;
+  width: 350px;
+  padding: 10px 5px;
+  box-shadow: 7px 7px 20px 4px #77878B;
+  background-color: #BBC7A4;
+  font-family: "Calibri", sans-serif;
+  color: #3B6064;
+}
+.animal-name {
+  font-size: 25px;
+  text-transform: uppercase;
+  border: 1px solid #3B6064;
+  border-radius: 5px;
+  width: 300px;
+  background-color: #C6C6C6;
+  text-align: center;
+  margin: auto;
+  padding: 10px 0;
+}
+.image {
+  width: 300px;
+  height: 200px;
+  border: 1px solid #3B6064;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+}
+.content {
+  border: 1px solid #3B6064;
+  border-radius: 5px;
+  width: 300px;
+  margin: auto;
+  margin-top: 10px;
+  background-color: #C6C6C6;
+  line-height: 130%;
+}
+.fun-fact {
+  padding: 0 10px;
+  font-style: italic;
+}
+.info {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 10px;
+}
+.descriptor {
+  font-weight: bold;
+}
+.about {
+  padding: 0 10px;
+  text-align: justify;
+}

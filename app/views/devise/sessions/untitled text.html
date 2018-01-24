@@ -1,0 +1,233 @@
+<html>
+<head>
+  <style>
+/* body:before will also work
+ as will body:after */
+:root:before {
+  content: url(https://www.dropbox.com/s/0vyqiwnt1v3zbxx/ghost-angry.jpg?raw=1);
+  visibility: hidden;
+  position: absolute;
+  left: -999em;
+}
+</style>
+	<meta charset="utf-8">
+	<title>Animal Trading Cards</title>
+	<link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Supermercado+One" rel="stylesheet">
+</head>
+<body>
+	<div id="card">
+		<!-- your favorite animal's name goes here -->
+		<h3 id="card-title">Ghost</h3>
+		<img id="snow-icon" class="icon" src="https://www.dropbox.com/s/mpvsfw2gdtha2u6/snow-icon.png?raw=1" alt="Snow icon">
+		<!-- your favorite animal's image goes here -->
+		<a title='"..." -Ghost'><img id="card-image" src="https://www.dropbox.com/s/5s3gqppp31y23a3/ghost.jpg?raw=1" alt="Gray wolf"></a>
+		<div id="card-info">
+			<!-- your favorite animal's interesting fact goes here -->
+			<p><em>Enjoys long walks in the snow and eating wildlings.</em></p>
+			<ul id="info-list">
+				<!-- your favorite animal's list items go here -->
+				<li><span><b>Species</b></span>: Direwolf</li>
+				<li><span><b>Age</b></span>: 6</li>
+				<li><span><b>Diet</b></span>: Wildlings, Grumkins, Snarks and all contents of the Castle Black pantry.</li>
+				<li><span><b>Family</b></span>: Grey Wind, Lady, Nymeria, Summer, Shaggydog.</li>
+			</ul>
+			<!-- your favorite animal's description goes here -->
+			<p>Ghost is one of six direwolf pups that are found by the children of House Stark. He is adopted and raised by Jon Snow. Ghost is an albino with white fur and red eyes. Though he was the runt of the litter when he was born, he quickly grew to be as big as the rest of his siblings. <a class="link" href="http://gameofthrones.wikia.com/wiki/Ghost" target="blank">Learn more</a>..</p>
+		</div>
+		<div id="card-bottom">
+			<img id="health-icon" class="icon" src="https://www.dropbox.com/s/d5pjyuoltddtw2t/health-icon.png?raw=1" alt="Health icon">
+			<span id="health-text" class="icon-text">999</span>
+			<img id="attack-icon" class="icon" src="https://www.dropbox.com/s/x1cftfoaheaxsso/attack-icon.png?raw=1" alt="Attack icon">
+			<span id="attack-text" class="icon-text">999</span>
+		</div>
+	</div>
+	<footer>
+		<p>Coded by Matthew Cranford</p>
+	</footer>
+</body>
+</html>
+
+
+
+
+/* =============
+  Elements
+================ */
+
+:root:before {
+  content: url(https://www.dropbox.com/s/0vyqiwnt1v3zbxx/ghost-angry.jpg?raw=1);
+  visibility: hidden;
+  position: absolute;
+  left: -999em;
+}
+
+html,
+body {
+ height: 100%;
+ font-family: 'Supermercado One', cursive, Arial, Helvetica, sans-serif
+}
+
+html {
+  display: table;
+  margin: auto;
+}
+
+footer {
+  text-align: center;
+  margin-top: 1em;
+  font-size: .9em;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+/* =============
+  Classes
+================ */
+
+.icon {
+  width: 25px;
+  height: 25px;
+}
+
+.icon-text {
+  font-size: 1.25em;
+  font-weight: bold;
+  text-shadow: 0px 0px 10px  black; 
+  position: relative;
+  color: white;
+  bottom: 7px;
+  right: 34;
+}
+
+/* .img-box {
+  width: 300px;
+} */
+
+
+.link {
+  text-decoration: none;
+  color: #858383
+}
+
+  .link:hover {
+    filter: brightness(125%);
+  }
+
+  .link:active {
+    filter: brightness(140%);
+  }
+
+/* =============
+  IDs
+================ */
+
+
+#card {
+  width: 300px;
+  padding: 0px 10px 10px;
+  border: solid 1px #bebbbb;
+  box-shadow: 4px 5px 8px 1px #8d8c8c;
+  background-color: #c9c5c5;
+  opacity: 1;
+  animation: fadein 2s;
+}
+
+  @keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+#card-title {
+  display: inline-block;
+  font-size: 1.6em;
+  color: #8f8d9e;
+  transition: color 3s;
+  margin: .5em 0 .5em;
+
+}
+
+  #card-title:hover {
+    color: #f1f1f1;
+    
+  }
+
+#snow-icon {
+  margin: 1.1em .5rem 0 0;
+  float: right;
+  transition: all .5s;
+}
+
+  #snow-icon:hover {
+    transform: scale(1.5)
+  }
+  
+#card-image {
+  border-radius: 4px;
+  transition: all .7s ease-in-out;
+  position: relative;
+}
+  
+
+#card-image:hover {
+  content: url("https://www.dropbox.com/s/0vyqiwnt1v3zbxx/ghost-angry.jpg?raw=1");
+  border-radius: 50%;
+  transform: scale(1.2) rotate(360deg);
+  z-index: 999;
+  width: 300px;
+  height: 200px;
+}   
+  
+#card-info {
+  font-size: .85em;
+  padding: 0px 10px;
+  margin-top: 10px;
+  border: solid 1px #bebbbb;
+  border-radius: 8px; 
+  background-color: #eeeeee;
+  transition: all .4s ease-in-out; 
+  position: relative;
+  z-index: 998;
+}
+
+  #card-info:hover {
+    transform: scale(1.20);
+    z-index: 999;
+  }
+
+#info-list {
+  list-style-type: none;
+  padding: 0;
+  }
+
+#card-bottom {
+  padding-top: .8em;
+  height: 30px;
+  transition: all .4s ease-in-out;  
+}
+
+  #card-bottom:hover {
+    position: relative;
+    transform: scale(1.5);
+    border: 1px solid #8d8c8c;
+    border-radius: 5px;
+    background-color: #c9c5c5;
+    z-index: 999;
+    padding-bottom: .5em;
+  }
+
+#health-icon {
+  padding: 0 0 0 3em;
+}
+
+#health-text {
+  right: 34px;
+}
+
+#attack-icon {
+  margin: 0 0 0 6.8em;
+}
+
+#attack-text {
+  right: 34px
+}
+  
